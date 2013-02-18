@@ -21,6 +21,12 @@ and Blueprint http://www.blueprintcss.org/
 
 /* =Reset
 -------------------------------------------------------------- */
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko*/
+    box-sizing: border-box;
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -391,6 +397,12 @@ nav ul li {
 /* =Content
 ----------------------------------------------- */
 
+.site {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .sticky {
 }
 .hentry {
@@ -554,6 +566,47 @@ object {
 	display: none;
 }
 
+/* =Footer
+----------------------------------------------- */
+
+footer {
+	font-size: .8em;
+	border-top: 1px dotted #ccc;
+	margin-top: 2em;
+	padding-top: 2em;
+	padding-bottom: 5em;
+}
+
+footer h1 {
+	font-family: merriweather, serif;
+	font-weight: 700;
+	font-size: 1em;
+	text-align: left;
+	margin-top: .67em;
+	margin-bottom: .67em;
+}
+
+footer p {
+	line-height: .5;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/* =Layout
+----------------------------------------------- */
+
+.content-area {
+    float: left;
+    Width: 80%;
+}
+
+.widget-area{
+    float: left;
+    Width: 20%;
+    padding: 2em;
+}
+
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 
@@ -582,3 +635,16 @@ object {
     width: 1px;
 }
     
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
